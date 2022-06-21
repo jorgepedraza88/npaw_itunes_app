@@ -1,6 +1,9 @@
-import background from "./../img/background_radio.jpg";
-import { Box } from "@mui/material";
+// Components
 import Search from "./Search";
+// Pics
+import background from "./../img/background_radio.jpg";
+// MUI
+import { Box } from "@mui/material";
 
 const Hero = () => {
   return (
@@ -22,12 +25,9 @@ const Hero = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor: "rgba(0,53,85,0.6)",
+            backgroundColor: "rgba(0, 53, 85, 0.6)",
             margin: "0 auto",
             padding: "2rem",
-          }}
-          md={{
-            width: "100vw",
           }}
         >
           <Search />

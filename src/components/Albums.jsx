@@ -1,3 +1,4 @@
+// Hooks
 import { useState } from "react";
 // Components:
 import AlbumIndividual from "./AlbumIndividual";
@@ -15,7 +16,8 @@ const Albums = () => {
   // State to show Grid or Table
   const [showVertical, setShowVertical] = useState(false);
 
-  const handleChange = async (event, value) => {
+  // Page Change
+  const handleChange = async (e, value) => {
     setPage(value);
     window.location.href = "/#results";
   };
@@ -67,11 +69,13 @@ const Albums = () => {
       <Stack spacing={2} justifyContent="center" alignItems="center" marginY={3}>
         {albums?.length > 0 ? (
           <Pagination
-            count={10}
+            shape="rounded"
+            count={5}
             color="primary"
             onChange={handleChange}
             defaultPage={1}
             page={page}
+            size="large"
           />
         ) : null}
       </Stack>

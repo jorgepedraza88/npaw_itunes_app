@@ -1,22 +1,26 @@
+// Hooks
 import { useState } from "react";
+// Context
 import useItunes from "../hooks/useItunes";
-// Components
-import { FormControl, TextField, Button, Box, Container, Typography } from "@mui/material";
+// MUI
+import { FormControl, TextField, Button, Box, Typography } from "@mui/material";
+// Icons
+import SearchIcon from "@mui/icons-material/Search";
 
 const Search = () => {
-  const { search, setSearch, searchAlbum } = useItunes();
+  const { search, setSearch, searchAlbum, setPage } = useItunes();
   const [error, setError] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (search === "") {
       setError(true);
+      setPage(1);
     } else {
       setError(false);
       await searchAlbum();
-      setTimeout(() => {
-        window.location.href = "/#results";
-      }, 50);
+      // Scroll to #results
+      window.location.href = "/#results";
     }
   };
 
@@ -37,8 +41,9 @@ const Search = () => {
         fontFamily="Poppins"
         color="white"
         maxWidth="90%"
+        sx={{ fontSize: "3rem" }}
       >
-        The best App to Search your favourite albums
+        The best app to find your favourite albums
       </Typography>
       {error && (
         <Typography color="error" variant="h6">
@@ -52,14 +57,19 @@ const Search = () => {
             type="input"
             variant="filled"
             value={search}
-            placeholder="Artist, Album name..."
+            placeholder="Artist, Album, Genre..."
             inputProps={{
               style: {
                 fontSize: "1.2rem",
                 backgroundColor: "#f8f8f8",
                 borderRadius: "5px",
                 padding: "1rem",
-                width: "20rem",
+              },
+            }}
+            sx={{
+              width: {
+                xs: "100%",
+                md: "30rem",
               },
             }}
             inputMode="text"
@@ -68,6 +78,7 @@ const Search = () => {
         </FormControl>
         <Box sx={{ display: "flex", justifyContent: "center" }}>
           <Button
+            startIcon={<SearchIcon />}
             type="submit"
             size="large"
             variant="contained"

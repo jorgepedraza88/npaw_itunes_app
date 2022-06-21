@@ -2,6 +2,7 @@
 import Header from "./components/Header";
 import Albums from "./components/Albums";
 import Hero from "./components/Hero";
+import Footer from "./components/Footer";
 // Context
 import { ItunesProvider } from "./context/ItunesProvider";
 // Material UI
@@ -16,6 +17,7 @@ function App() {
         <Container maxWidth="xl">
         <Albums />
         </Container>
+        <Footer />
       </ItunesProvider>
     </>
   );

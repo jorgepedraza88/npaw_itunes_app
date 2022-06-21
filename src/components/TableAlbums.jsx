@@ -1,3 +1,5 @@
+// Components
+import TableAlbumIndividual from "./TableAlbumIndividual";
 // Material UI
 import {
   TableBody,
@@ -6,10 +8,9 @@ import {
   TableContainer,
   TableFooter,
   TableHead,
-  TablePagination,
   TableRow,
+  Typography,
 } from "@mui/material";
-import TableAlbumIndividual from "./TableAlbumIndividual";
 
 const TableAlbumns = ({ albums }) => {
   return (
@@ -17,11 +18,21 @@ const TableAlbumns = ({ albums }) => {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Art Cover</TableCell>
-            <TableCell align="center">Album Name</TableCell>
-            <TableCell align="center">Artist Name</TableCell>
-            <TableCell align="center">Genre</TableCell>
-            <TableCell align="center">Check on Itunes</TableCell>
+            <TableCell>
+              <Typography variant="h3">Art Cover</Typography>
+            </TableCell>
+            <TableCell align="center">
+              <Typography variant="h3">Art Cover</Typography>
+            </TableCell>
+            <TableCell align="center">
+              <Typography variant="h3">Album name</Typography>
+            </TableCell>
+            <TableCell align="center">
+              <Typography variant="h3">Artist name</Typography>
+            </TableCell>
+            <TableCell align="center">
+              <Typography variant="h3">Genre</Typography>
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
