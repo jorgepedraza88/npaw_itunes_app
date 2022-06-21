@@ -32,12 +32,22 @@ const Albums = () => {
             variant="h3"
             component={"h2"}
             fontWeight="700"
-            sx={{ scrollMarginTop: "2rem" }}
+            sx={{ scrollMarginTop: "2rem" }}s
           >
             Your search
           </Typography>
           <Box sx={{ display: "flex", gap: "2rem", alignItems: "center" }}>
-            <Typography marginY={5} variant="h6" fontWeight="700">
+            <Typography
+              marginY={5}
+              variant="h6"
+              fontWeight="700"
+              sx={{
+                display: {
+                  xs: "none",
+                  md: "block",
+                },
+              }}
+            >
               Change View
             </Typography>
             {!showVertical ? (

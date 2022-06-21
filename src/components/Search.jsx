@@ -39,7 +39,7 @@ const Search = () => {
         variant="h2"
         component={"h1"}
         fontFamily="Poppins"
-        color="white"
+        color="#fdfdfd"
         maxWidth="90%"
         sx={{ fontSize: "3rem" }}
       >
