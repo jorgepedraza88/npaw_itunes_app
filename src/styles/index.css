@@ -1,0 +1,93 @@
+/* GLOBALS */
+:root {
+  --primary: rgb(0, 58, 93);
+  --blanco: #ffffff;
+  --negro: #000000;
+
+  --fontMain: "Source Sans Pro", sans-serif;
+  --fontSec: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fontMain);
+  font-size: 16px;
+  line-height: 2;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+}
+
+h1 {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+
+/* UTILITIES */
+
+.container {
+  max-width: 120rem;
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+.header {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 58, 93, 1) 50%, #336b6e 100%);
+  color: white;
+  padding: 0.5rem 0;
+}
+
+.logo__title {
+  font-size: 5rem;
+}
+.logo__title span {
+  font-size: 6rem;
+  font-weight: 800;
+}
+@media (max-width: 480px) {
+  .logo__title {
+    font-size: 3rem;
+  }
+  .logo__title span {
+    font-size: 3rem;
+    font-weight: 800;
+  }
+}
+
+/* ALBUMS */
+
+.cover:hover {
+  cursor: pointer;
+  opacity: 60%;
+}
+
+.limit-title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.limit-artist {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+/* Icon to change the view */
+.icon_list:hover {
+  cursor: pointer;
+  color: var(--primary);
+  transition: all 0.5s;
+  transform: scale(1.2);
+}
