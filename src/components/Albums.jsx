@@ -6,7 +6,7 @@ import TableAlbumns from "./TableAlbums";
 // Context
 import useItunes from "../hooks/useItunes";
 // Material UI
-import { Typography, Grid, Stack, Pagination, Box } from "@mui/material";
+import { Typography, Grid, Stack, Pagination, Box, PaginationItem } from "@mui/material";
 import ViewListIcon from "@mui/icons-material/ViewList";
 import GridOnIcon from "@mui/icons-material/GridOn";
 
@@ -32,7 +32,8 @@ const Albums = () => {
             variant="h3"
             component={"h2"}
             fontWeight="700"
-            sx={{ scrollMarginTop: "2rem" }}s
+            sx={{ scrollMarginTop: "2rem" }}
+            s
           >
             Your search
           </Typography>

@@ -26,12 +26,12 @@ const ItunesProvider = ({ children }) => {
     } catch (error) {
       console.log(error);
     }
-  }, [search, offset]);
+  }, [offset, page, search]);
 
   useEffect(() => {
     changeOffset();
     searchAlbum();
-  }, [changeOffset, searchAlbum]);
+  }, [changeOffset, page]);
 
   return (
     <ItunesContext.Provider

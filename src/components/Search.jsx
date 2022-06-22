@@ -17,10 +17,13 @@ const Search = () => {
       setError(true);
       setPage(1);
     } else {
+      setPage(1);
       setError(false);
       await searchAlbum();
       // Scroll to #results
-      window.location.href = "/#results";
+      setTimeout(() => {
+        window.location.href = "/#results";
+      }, 50);
     }
   };
 
