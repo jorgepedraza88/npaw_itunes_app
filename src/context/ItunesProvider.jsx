@@ -9,13 +9,13 @@ const ItunesProvider = ({ children }) => {
   const [offset, setOffset] = useState(0);
 
   // Function to change the page number from the API
-  const changeOffset = () => {
+  const changeOffset = useCallback(() => {
     if (page > 1) {
       setOffset(page * 20 - 20);
     } else {
       setOffset(0);
     }
-  };
+  }, [page, offset]);
 
   const searchAlbum = useCallback(async () => {
     const url = `https://itunes.apple.com/search?term=${search}&limit=20&offset=${offset}&entity=album`;
@@ -31,7 +31,7 @@ const ItunesProvider = ({ children }) => {
   useEffect(() => {
     changeOffset();
     searchAlbum();
-  }, [changeOffset, page]);
+  }, [changeOffset]);
 
   return (
     <ItunesContext.Provider
